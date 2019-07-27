@@ -28,9 +28,14 @@ class FriendsList {
     );
   }
   // TODO: I need this function to print out who the best and worst is. I am getting close using the keys, but I think I need to make an new array with map and sort it using the sort fuction
-  bestAndWorst() {
-    console.log(this.friends[Object.keys(this.friends).length - 1]);
-  }
+  // bestAndWorst() {
+  //   let potNewBFF = function {
+  //     for (let i = 0; i < this.friends.length; i++) {
+  //       this.friends.map(x[4])
+  //     }
+  //   }
+  //   console.log(`Chewy's new potential best friend is: ${}`;
+  // }
 }
 
 class Friend {
@@ -49,7 +54,7 @@ compareList.addFriend();
 console.log(compareList);
 compareList.addFriend();
 compareList.addFriend();
-compareList.bestAndWorst();
+console.log(Math.max(...compareList));
 // TODO Sort method
 // this.friends.sort((a, b) => {
 //   return b.score - a.score;
