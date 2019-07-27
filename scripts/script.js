@@ -26,18 +26,11 @@ class FriendsList {
         )
       )
     );
-    
   }
-  printList() {
-    // for (let i = 0; i < compareList.length; i++) {
-    //   console.log(compareList[i]);
-    // }
+  // TODO: I need this function to print out who the best and worst is. I am getting close using the keys, but I think I need to make an new array with map and sort it using the sort fuction
+  bestAndWorst() {
+    console.log(this.friends[Object.keys(this.friends).length - 1]);
   }
-  // TODO:
-  // I can reduce the scores into a total and compare them to each other. I will console.log the highest score.
-  //   bestFriend(){
-  //     for ()
-  //   }
 }
 
 class Friend {
@@ -46,6 +39,7 @@ class Friend {
     this.flyingSkill = flyingSkill;
     this.dejarikSKill = dejarikSKill;
     this.fEmpire = fEmpire;
+    this.total = this.flyingSkill + this.dejarikSKill - this.fEmpire;
   }
 }
 
@@ -53,10 +47,9 @@ const compareList = new FriendsList();
 console.log(compareList);
 compareList.addFriend();
 console.log(compareList);
-compareList.addFriend("Luke", 10, 4, 8);
-compareList.addFriend("Random Pilot 1", 6, 2, 6);
-compareList.printList();
-
+compareList.addFriend();
+compareList.addFriend();
+compareList.bestAndWorst();
 // TODO Sort method
 // this.friends.sort((a, b) => {
 //   return b.score - a.score;
